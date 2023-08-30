@@ -26,13 +26,7 @@ if (empty($_SESSION['role']))
 
         <li class="nav-item">
           <?php if ($_SESSION['role'] == 'admin') {
-            echo '<a href="../app/sms.php" class="nav-link">Send SMS</a>';
-          } ?>
-        </li>
-
-        <li class="nav-item">
-          <?php if ($_SESSION['role'] == 'admin') {
-            echo '<a href="../app/cmplist.php" class="nav-link">Complaint List</a>';
+            echo '<a href="../app/complaints.php" class="nav-link">Complaint List</a>';
           } ?>
         </li>
       </ul>

@@ -5,7 +5,7 @@ session_start();
 define('dbhost', 'localhost');
 define('dbuser', 'root');
 define('dbpass', '');
-define('dbname', 'project');
+define('dbname', 'rent_a_nest');
 
 // Connecting database
 try {
