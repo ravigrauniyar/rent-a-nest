@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 // Define database
 define('dbhost', 'localhost');
 define('dbuser', 'root');
