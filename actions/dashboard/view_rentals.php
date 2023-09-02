@@ -1,6 +1,6 @@
 <?php
 	if (empty($_SESSION['username']))
-	header('Location: index.php?q='.serialize_url('home', 'login'));
+		header('Location: index.php?q='.serialize_url('home', 'login'));
 
 	try {
 		if ($_SESSION['role'] == 'admin') {
@@ -33,7 +33,7 @@
 
 		$stmt = $connect->prepare('SELECT * FROM rental_registrations WHERE :user_id = user_id ');
 		$stmt->execute(array(
-			':user_id' => $_SESSION['id']
+			':user_id' => $_SESSION['user_id']
 		));
 		$rental_data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

@@ -17,35 +17,47 @@
 	if (isset($_POST['update_rental'])) {
 		$message = '';
 	
+		$fileName = get_uploaded_file();
+		if($fileName !== '')
+		{
 		// Get data from form
-		$address = $_POST['address'];
-		$rent = $_POST['rent'];
-		$deposit = $_POST['deposit'];
-		$description = $_POST['description'];
-		$id = $_POST['id'];
-		$rooms = $_POST['rooms'];
-	
-		try {
-			$stmt = $connect->prepare('UPDATE rental_registrations SET address = :address, rent = :rent, rooms = :rooms, deposit = :deposit, description = :description WHERE id = :id');
-	
-			$stmt->execute(array(
-				':address' => $address,
-				':rent' => $rent,
-				':rooms' => $rooms,
-				':deposit' => $deposit,
-				':description' => $description,
-				':id' => $id
-			));
-	
-			header('Location: index.php?q='.serialize_url('dashboard', 'update_rental', $id, true));
-			exit;
-		} catch (PDOException $e) {
-			echo $e->getMessage();
+			$address = $_POST['address'];
+			$rent = $_POST['rent'];
+			$deposit = $_POST['deposit'];
+			$description = $_POST['description'];
+			$id = $_POST['id'];
+			$rooms = $_POST['rooms'];
+		
+			try {
+				$stmt = $connect->prepare(
+						'UPDATE rental_registrations 
+						SET address = :address, rent = :rent, rooms = :rooms, deposit = :deposit,
+							description = :description, image= :image WHERE id = :id');
+		
+				$stmt->execute(array(
+					':address' => $address,
+					':rent' => $rent,
+					':rooms' => $rooms,
+					':deposit' => $deposit,
+					':description' => $description,
+					':id' => $id,
+					':image' => $fileName
+				));
+		
+				header('Location: index.php?q='.serialize_url('dashboard', 'update_rental', $id, true));
+				exit;
+			} 
+			catch (PDOException $e) {
+				echo $e->getMessage();
+			}
+		}
+		else{
+			$message = "Couldn't update image. Try again!";
 		}
 	}	
 
 	if ($result) {
-		$message = 'Update successfully. Thank you';
+		$message = 'Update successfully. Thank you!';
 	}
 
 include 'components/dashboard/update_rental.php';

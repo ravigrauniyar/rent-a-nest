@@ -13,22 +13,33 @@
                         <div class="card card-inverse card-info mb-3" style="padding:1%;">
                             <div class="card-block">
                                 <div class="row">
-                                    <div class="col-3">
-                                        <h4 class="text-center mb-3">Owner Details</h4>
-                                        <p><b>Owner Name: </b><?= $organized_data[$rental['id']]['fullname'] ?></p>
-                                        <p><b>Mobile Number: </b><?= $organized_data[$rental['id']]['mobile'] ?></p>
-                                        <p><b>Email: </b><?= $organized_data[$rental['id']]['email'] ?></p>
+                                    <div class="col-md-6">
+                                        <div class="col text-left">
+                                            <h4 class="text-center mb-3">Owner Details</h4>
+                                            <p><b>Owner Name: </b><?= $organized_data[$rental['id']]['fullname'] ?></p>
+                                            <p><b>Mobile Number: </b><?= $organized_data[$rental['id']]['mobile'] ?></p>
+                                            <p><b>Email: </b><?= $organized_data[$rental['id']]['email'] ?></p>
+                                            <p><b>Username: </b><?= $organized_data[$rental['id']]['username'] ?></p>
+                                            <p><b>Address: </b><?= $organized_data[$rental['id']]['address'] ?></p>
+                                            <p><b>Member since: </b><?= $organized_data[$rental['id']]['created_at'] ?></p>
+                                        </div>
+                                        <div class="col text-left">
+                                            <h4 class="text-center mb-3">Room Details</h4>
+                                            <p><b>Address: </b><?= $rental['address'] ?></p>
+                                            <p><b>Available Rooms: </b><?= $rental['rooms'] ?></p>
+                                            <p><b>Rent (Rs.): </b><?= $rental['rent'] ?></p>
+                                            <p><b>Deposit (Rs.): </b><?= $rental['deposit'] ?></p>
+                                        </div>
                                     </div>
-                                    <div class="col-3">
-                                        <h4 class="text-center mb-3">Room Details</h4>
-                                        <p><b>Address: </b><?= $rental['address'] ?></p>
-                                        <p><b>Available Rooms: </b><?= $rental['rooms'] ?></p>
-                                        <p><b>Rent (Rs.): </b><?= $rental['rent'] ?></p>
-                                        <p><b>Deposit (Rs.): </b><?= $rental['deposit'] ?></p>
-                                    </div>
-                                    <div>
-                                        <h4 class="mb-3">Other Details</h4>
+                                    <div class="col-md-6 text-left">
+                                        <h4 class="text-center mb-3">Other Details</h4>
                                         <p><b>Description: </b><?= $rental['description'] ?></p>
+                                        <p><b>Sneak peek</b></p>
+                                        <img src="<?= $rental['image'] ?>" alt="Uploaded Image" width="390" height="200">
+                                    </div>
+                                </div>                                
+                                <div class="row mt-4">
+                                    <div class="col">
                                         <a class="btn btn-danger mx-lg-1 mt-sm-3 mt-lg-0" href="index.php?q=<?= serialize_url('dashboard', 'delete_rental', $rental['id']) ?>" >Delete</a>
                                         <a class="btn btn-warning mx-lg-1 mt-sm-3 mt-lg-0" href="index.php?q=<?= serialize_url('dashboard', 'update_rental', $rental['id']) ?>" >Edit</a>
                                         <a class="btn btn-warning mx-lg-1 mt-sm-3 mt-lg-0" href="index.php?q=<?= serialize_url('dashboard', 'file_complaint') ?>" >Complaint</a><br><br>

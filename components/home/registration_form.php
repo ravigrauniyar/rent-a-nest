@@ -38,17 +38,24 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Password" name="password" required>
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address" placeholder="Address here" name="address" required>
                         </div>
-
-                        <div class="form-group">
-                            <label for="c_password">Confirm Password</label>
-                            <input type="password" class="form-control" id="c_password" placeholder="Confirm Password" name="c_password" required>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" id="password" placeholder="Password" name="password" required>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="c_password">Confirm Password</label>
+                                    <input type="password" class="form-control" id="c_password" placeholder="Confirm Password" name="c_password" required>
+                                </div>
+                            </div>
                         </div>
-
                         <button type="submit" class="btn btn-primary" name='register' value="register">Submit</button>
                     </form>
                 </div>

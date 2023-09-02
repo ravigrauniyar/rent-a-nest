@@ -39,6 +39,10 @@
 						</div>
 					</div>
 				</div>
+                <div class="row form-group">
+                    <label for="image">Image</label>
+                    <input type="file" name="image" accept="image/*" required />                
+                </div>
 				<div class="row form-group">
 					<label for="description">Description</label>
 					<textarea class="form-control" id="description" placeholder="Description" name="description" required><?= isset($data['description']) ? $data['description'] : ''; ?></textarea>

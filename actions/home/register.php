@@ -6,15 +6,20 @@
         $email = $_POST['email'];
         $password = $_POST['password'];
         $fullname = $_POST['fullname'];
+        $address = $_POST['address'];
 
         try {
-            $stmt = $connect->prepare('INSERT INTO users (fullname, mobile, username, email, password) VALUES (:fullname, :mobile, :username, :email, :password)');
+            $stmt = $connect->prepare(
+                    'INSERT INTO users (fullname, mobile, username, email, password, address) 
+                        VALUES (:fullname, :mobile, :username, :email, :password, address)'
+                    );
             $stmt->execute([
                 ':fullname' => $fullname,
                 ':username' => $username,
                 ':password' => md5($password),
                 ':email' => $email,
-                ':mobile' => $mobile
+                ':mobile' => $mobile,
+                ':address' => $address
             ]);
             header('Location: index.php?q='.serialize_url('home', 'register', 0, true));
             exit;

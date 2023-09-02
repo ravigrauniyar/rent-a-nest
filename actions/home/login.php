@@ -17,6 +17,7 @@
 			} 
 			elseif (md5($password) == $data['password']) {
 				$_SESSION['id'] = $data['id'];
+				$_SESSION['user_id'] = $data['id'];
 				$_SESSION['username'] = $data['username'];
 				$_SESSION['fullname'] = $data['fullname'];
 				$_SESSION['role'] = $data['role'];

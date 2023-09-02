@@ -1,25 +1,26 @@
 <?php
     session_start();
     require_once 'database/db_config.php';
-    require_once 'services/json_encryption.php';
+    require_once 'services/url_handling/url_handler.php';
+    require_once 'services/image_handling/image_handler.php';
 
-    $serialized_initial_url = initialize_url();
+    // $serialized_initial_url = initialize_url();
 
     // Get the parameters from the URL
-    $request = isset($_GET['q']) ? $_GET['q'] : $serialized_initial_url;
+    $request = isset($_GET['q']) ? $_GET['q'] : '';
     
+    // Decrypt the serialized url
     $data = deserialize_url($request);
-    // Redirect to home for exceptions url
 
-    $page = isset($data['page']) ? $data['page'] : 'home';
-    $action = isset($data['action']) && !empty($data['action']) ? $data['action'] : 'view';
-    $id = isset($data['id']) && $data['id'] !== 0 ? $data['id'] : 0;
-    $result = isset($data['result']) &&!empty($data['result'])? $data['result'] : false;
+    // Retrieve the parameters
+    $page = $data['page'];
+    $action = $data['action'];
+    $id = $data['id'];
+    $result = $data['result'];
 
-    // Initialize the page title and content
+    // Initialize the page variables
     $page_title = strtoupper($page);
     $page_content = $page;
-
     $page_nav = ($page === 'dashboard')? 'dashboard/top_nav' : 'home/navbar';
 
     // Include the template
