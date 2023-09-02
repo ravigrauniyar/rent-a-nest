@@ -20,9 +20,10 @@
 				$_SESSION['user_id'] = $data['id'];
 				$_SESSION['username'] = $data['username'];
 				$_SESSION['fullname'] = $data['fullname'];
+				$_SESSION['email'] = $data['email'];
 				$_SESSION['role'] = $data['role'];
 
-				header('Location: index.php?q='.serialize_url('dashboard'));
+				header('Location: index.php?q='.serialize_url('dashboard', 'view'));
 				exit;
 			} else {
 				$errMsg = 'Password not match.';

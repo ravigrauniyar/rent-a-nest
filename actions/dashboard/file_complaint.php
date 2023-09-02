@@ -1,7 +1,4 @@
 <?php
-if (empty($_SESSION['username'])) {
-    header('Location: index.php?q='.serialize_url('home', 'login'));
-}
 if (isset($_POST['file_complaint'])) {
 	$apartment_info = $_POST['apartment_info'];
 	$complaint = $_POST['complaint'];

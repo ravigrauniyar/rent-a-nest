@@ -1,6 +1,6 @@
 <section id="services">
 	<div class="container">
-		<div class="row">
+		<div class="row text-left">
 			<div class="col-md-4 mx-auto">
 				<div class="alert alert-info" role="alert">
 					<?php
@@ -8,7 +8,7 @@
 						echo '<div style="color:#FF0000;text-align:center;font-size:17px;">' . $errMsg . '</div>';
 					}
 					?>
-					<h2 class="text-center">Login</h2>
+					<h2 class="text-center mb-3">Login</h2>
 					<form action="" method="post">
 						<div class="form-group">
 							<label for="exampleInputEmail1">Email Address/User Name</label>

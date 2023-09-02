@@ -1,14 +1,14 @@
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-md-6 mx-auto">
+            <div class="col-md-6 mx-auto mt-5 text-left">
                 <div class="alert alert-info" role="alert">
                     <?php
                     if (isset($errMsg)) {
                         echo '<div style="color:#FF0000;text-align:center;font-size:17px;">' . $errMsg . '</div>';
                     }
                     ?>
-                    <h2 class="text-center">Register</h2>
+                    <h2 class="text-center mb-3">Register</h2>
                     <form action="" method="post">
                         <div class="row">
                             <div class="col-6">

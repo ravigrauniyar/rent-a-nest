@@ -20,11 +20,14 @@
     </head>
 
     <body id="page-top">
-        <header class="masthead">
-            <!-- Navbar -->
-            <?php include 'components/'. $page_nav .'.php'; ?>
-            <!-- Page Content -->
+        <!-- Navbar -->
+        <?php include 'components/'. $page_nav .'.php'; ?>
+        <header 
+            class="masthead d-flex align-items-center"
+            style="<?php echo ($page_content === 'home') ? 'min-height: 110vh;' : 'min-height: 100vh;'?>"
+        >
             <div class="container">
+                <!-- Page Content -->
                 <?php include 'pages/'.$page_content.'.php'; ?>
             </div>
         </header>

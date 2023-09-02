@@ -1,7 +1,7 @@
-<section class="wrapper" style="margin-left: 20%;margin-top: -10%; background-color: #212529;">
+<section class="wrapper">
 	<div class="container">
-		<div class="row">
-			<div class="col-12">
+		<div class="row text-left">
+			<div class="col-sm-12 col-md-5 mx-auto mt-5 p-3 alert alert-info table-responsive" role="alert" style="max-height: 75vh;">
 				<?php
 				if (isset($message)) {
 					echo '<div style="color:#FF0000;text-align:center;font-size:17px;">' . $message . '</div>';
@@ -10,7 +10,7 @@
 				<h2>Complaints</h2>
 				<form action="" method="post">
 					<div class="row">
-						<div class="col-6">
+						<div class="col-12">
 							<div class="form-group">
 								<label for="apartment_info">Apartment No./Name or Room No./Name</label>
 								<input type="text" class="form-control" id="apartment_info" placeholder="Full Name" name="apartment_info" required>
@@ -20,10 +20,10 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-6">
+						<div class="col-12">
 							<div class="form-group">
 								<label for="complaint">Complaint</label>
-								<textarea class="form-control" id="complaint" placeholder="Text" name="complaint" required></textarea>
+								<textarea class="form-control" rows="5" id="complaint" placeholder="Text" name="complaint" required></textarea>
 							</div>
 						</div>
 					</div>

@@ -1,7 +1,4 @@
 <?php
-	if (empty($_SESSION['username']))
-		header('Location: index.php?q='.serialize_url('home', 'login'));
-
 	if ($id !== 0) {
 		try {
 			$stmt = $connect->prepare('DELETE FROM rental_registrations where id = :id');

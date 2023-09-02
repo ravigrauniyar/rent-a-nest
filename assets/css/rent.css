@@ -29,10 +29,6 @@ h6 {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-section {
-  padding: 100px 0;
-}
-
 section h2.section-heading {
   font-size: 40px;
   margin-top: 0;
@@ -46,12 +42,6 @@ section h3.section-subheading {
   margin-bottom: 75px;
   text-transform: none;
   font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-@media (min-width: 768px) {
-  section {
-    padding: 140px 0;
-  }
 }
 
 .btn {
@@ -186,7 +176,6 @@ header.masthead {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 100vh;
 }
 
 header.masthead .intro-text {

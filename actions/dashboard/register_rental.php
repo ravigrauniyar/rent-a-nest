@@ -1,7 +1,4 @@
 <?php
-if (empty($_SESSION['username'])) {
-    header('Location: index.php?q='.serialize_url('home', 'login'));
-}
 $message = '';
     
 if (isset($_POST['register_apartment'])) 

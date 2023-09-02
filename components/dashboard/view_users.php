@@ -1,13 +1,13 @@
-<section class="wrapper" style="margin-left:20%;margin-top: -10%; background-color: #212529;">
+<section class="wrapper">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 mt-5">
                 <?php if (isset($errMsg)): ?>
                     <div style="color:#FF0000;text-align:center;font-size:17px;"><?= $errMsg ?></div>
                 <?php endif; ?>
-                <h2>List Of Users</h2>
-                <div class="table-responsive">
-                    <table class="table table-bordered">
+                <div class="table-responsive table-bordered p-3 mx-5" style="background-color: rgba(0,0,0,0.25); max-height: 75vh;">
+                    <h2 class="mb-3">List Of Users</h2>
+                    <table class="table" style="background-color: #FFF; color: #000;">
                         <thead>
                             <tr>
                                 <th>#</th>
