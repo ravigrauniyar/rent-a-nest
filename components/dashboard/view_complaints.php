@@ -18,19 +18,26 @@
 					</thead>
 					<tbody>
 						<?php
-							$index = 1;
-							foreach ($data as $key => $value) {
-								echo '<tr>
-									<td>'. $index. '</td>
-									<td>' . $value['apartment_info'] . '</td>
-									<td>' . $value['complaint'] . '</td>';
+							if($complaints_data){
+								$index = 1;
+								foreach ($complaints_data as $key => $value) {
+									echo '<tr>
+										<td>'. $index. '</td>
+										<td>' . $value['apartment_info'] . '</td>
+										<td>' . $value['complaint'] . '</td>';
 
-								// Fetch user data for the current complaint's user_id
-								$user_data = $organized_data[$value['id']];
-								
-								echo '<td>' . $user_data['fullname'] . '</td>
-									</tr>';
-								$index++;
+									// Fetch user complaints_data for the current complaint's user_id
+									$user_data = $organized_data[$value['id']];
+									
+									echo '<td>' . $user_data['fullname'] . '</td>
+										</tr>';
+									$index++;
+								}
+							}
+							else{
+								echo '<tr>
+                                    <td colspan="4" style="text-align:center;">No Complaints</td>
+                                </tr>';
 							}
 						?>
 					</tbody>
