@@ -1,11 +1,6 @@
 <section class="wrapper">
 	<div class="col-md-6 mx-auto text-left mt-5">
 		<div class="alert alert-info table-responsive" style="max-height: 75vh;" role="alert">
-			<?php
-			if(isset($message)){
-				echo '<div style="color:#FF0000;text-align:center;font-size:17px;">'.$message.'</div>';
-			}
-			?>
 			<h2 class="text-center mb-4">Update Details</h2>
 			<form action="" method="post" enctype="multipart/form-data">
 				<div class="row mx-0">
@@ -43,6 +38,11 @@
 				</div>
 				<button type="submit" class="btn btn-primary" name="update_rental" value="update_rental">Submit</button>
 			</form>
+			<?php
+				if(isset($message)){
+					echo '<div style="color:#FF0000;text-align:center;font-size:17px;">'.$message.'</div>';
+				}
+			?>
 		</div>
 	</div>
 </section>

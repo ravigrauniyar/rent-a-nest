@@ -11,7 +11,7 @@
         try {
             $stmt = $connect->prepare(
                     'INSERT INTO users (fullname, mobile, username, email, password, address) 
-                        VALUES (:fullname, :mobile, :username, :email, :password, address)'
+                        VALUES (:fullname, :mobile, :username, :email, :password, :address)'
                     );
             $stmt->execute([
                 ':fullname' => $fullname,
@@ -25,11 +25,11 @@
             exit;
         }
         catch (PDOException $e) {
-            echo $e->getMessage();
+            $errMsg = $e->getMessage();
         }
     }
     if ($result) {
-        $errMsg = 'Registration successful. Now you can login';
+        $errMsg = 'Registration successful. Now you can login!';
     }
     require_once('components/home/registration_form.php');
 ?>

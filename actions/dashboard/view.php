@@ -12,12 +12,12 @@
         $complaints_stmt->execute();
     } 
     else if ($role == 'admin') {
-        $stmt = $connect->prepare('SELECT count(*) as total_rentals FROM rental_registrations');
-        $stmt->execute();
+        $rental_stmt = $connect->prepare('SELECT count(*) as total_rentals FROM rental_registrations');
+        $rental_stmt->execute();
         
         $users_count = $connect->query('SELECT count(*) as register_user FROM users')->fetch(PDO::FETCH_ASSOC);
         
-        $complaints_count = $connect->prepare('SELECT count(*) as complaints FROM complaints');
+        $complaints_stmt = $connect->prepare('SELECT count(*) as complaints FROM complaints');
         $complaints_stmt->execute();
     }
 

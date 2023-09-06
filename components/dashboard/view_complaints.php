@@ -2,11 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12 mt-5 mx-5 px-3 pt-3 table-responsive table-bordered text-left" style="background-color: rgba(0,0,0,0.5); max-height: 75vh;">
-				<?php
-				if (isset($errMsg)) {
-					echo '<div style="color:#FF0000;text-align:center;font-size:17px;">' . $errMsg . '</div>';
-				}
-				?>
+				
 				<table class="table" style="background-color: #FFF; color: #000;">
 					<thead class="text-center">
 						<tr>
@@ -42,6 +38,11 @@
 						?>
 					</tbody>
 				</table>
+				<?php
+					if (isset($errMsg)) {
+						echo '<div style="color:#FF0000;text-align:center;font-size:17px;">' . $errMsg . '</div>';
+					}
+				?>
 			</div>
 		</div>
 	</div>

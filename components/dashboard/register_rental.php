@@ -1,9 +1,6 @@
 <section class="wrapper">
     <div class="col-md-6 col-sm-12 mx-auto mt-5">
         <div class="alert alert-info text-left table-responsive" style="max-height: 75vh;" role="alert">
-            <?php if (isset($message)) : ?>
-                <div style="color:#FF0000;text-align:center;font-size:17px;"><?= $message ?></div>
-            <?php endif; ?>
             <h4 class="text-center mb-3">Register Apartment</h4>
             <form action="" method="post" enctype="multipart/form-data">
                 <div class="row">
@@ -48,6 +45,10 @@
                     <button type="submit" class="btn btn-primary" name="register_apartment" value="register_apartment">Register</button>
                 </div>
             </form>
+            
+            <?php if (isset($message)) : ?>
+                <div style="color:#FF0000;text-align:center;font-size:17px;"><?= $message ?></div>
+            <?php endif; ?>
         </div>
     </div>
 </section>

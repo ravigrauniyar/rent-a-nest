@@ -69,11 +69,7 @@ nav.sidebar,
     width: 100%;
     margin-left: 0px;
   }
-
-  /*nav.sidebar a{
-      padding-right: 13px;
-    }*/
-
+  
   nav.sidebar .navbar-nav>li:first-child {
     border-top: 1px #e5e5e5 solid;
   }
@@ -112,11 +108,6 @@ nav.sidebar,
   nav.sidebar li {
     width: 100%;
   }
-
-  /*
-    nav.sidebar:hover{
-      margin-left: 0px;
-    }*/
 
   .forAnimate {
     opacity: 0;

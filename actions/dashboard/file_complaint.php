@@ -1,5 +1,6 @@
 <?php
-if (isset($_POST['file_complaint'])) {
+if (isset($_POST['file_complaint'])) 
+{
 	$apartment_info = $_POST['apartment_info'];
 	$complaint = $_POST['complaint'];
 	$user_id = $_POST['user_id'];

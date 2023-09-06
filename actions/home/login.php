@@ -26,7 +26,7 @@
 				header('Location: index.php?q='.serialize_url('dashboard', 'view'));
 				exit;
 			} else {
-				$errMsg = 'Password not match.';
+				$errMsg = 'Password did not match.';
 			}
 		} 
 		catch (PDOException $e) {

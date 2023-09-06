@@ -2,11 +2,7 @@
 	<div class="container">
 		<div class="row text-left">
 			<div class="col-sm-12 col-md-5 mx-auto mt-5 p-3 alert alert-info table-responsive" role="alert" style="max-height: 75vh;">
-				<?php
-				if (isset($message)) {
-					echo '<div style="color:#FF0000;text-align:center;font-size:17px;">' . $message . '</div>';
-				}
-				?>
+				
 				<h2>Complaints</h2>
 				<form action="" method="post">
 					<div class="row">
@@ -30,6 +26,11 @@
 
 					<button type="submit" class="btn btn-primary" name='file_complaint' value="file_complaint">Submit</button>
 				</form>
+				<?php
+					if (isset($message)) {
+						echo '<div style="color:#FF0000;text-align:center;font-size:17px;">' . $message . '</div>';
+					}
+				?>
 			</div>
 		</div>
 	</div>

@@ -3,11 +3,6 @@
 		<div class="row text-left">
 			<div class="col-md-4 mx-auto">
 				<div class="alert alert-info" role="alert">
-					<?php
-					if (isset($errMsg)) {
-						echo '<div style="color:#FF0000;text-align:center;font-size:17px;">' . $errMsg . '</div>';
-					}
-					?>
 					<h2 class="text-center mb-3">Login</h2>
 					<form action="" method="post">
 						<div class="form-group">
@@ -20,6 +15,11 @@
 						</div>
 						<button type="submit" class="btn btn-primary" name='login' value="Login">Sign In</button>
 					</form>
+					<?php
+						if (isset($errMsg)) {
+							echo '<div style="color:#FF0000;text-align:center;font-size:17px; margin-top:10px;">' . $errMsg . '</div>';
+						}
+					?>
 				</div>
 			</div>
 		</div>
