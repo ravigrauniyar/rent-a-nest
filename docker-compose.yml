@@ -1,0 +1,13 @@
+version: '3'
+services:
+  php:
+    build: .
+    ports:
+      - "8000:80"
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./database/rent_a_nest.sql:/docker-entrypoint-initdb.d/rent_a_nest.sql
+    command: ["--init-file", "/docker-entrypoint-initdb.d/rent_a_nest.sql"]

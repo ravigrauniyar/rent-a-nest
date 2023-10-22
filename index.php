@@ -3,7 +3,6 @@
     require_once 'database/db_config.php';
     require_once 'services/url_handling/url_handler.php';
     require_once 'services/image_handling/image_handler.php';
-    //require_once 'services/email_handling/email_handler.php';
 
     // Get the parameters from the URL
     $request = isset($_GET['q']) ? $_GET['q'] : '';
