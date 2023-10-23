@@ -1,6 +1,6 @@
 <?php
 // Define database
-define('dbhost', 'localhost');
+define('dbhost', 'mysql');
 define('dbuser', 'root');
 define('dbpass', 'root');
 define('dbname', 'rent_a_nest');

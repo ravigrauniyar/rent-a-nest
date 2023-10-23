@@ -8,7 +8,7 @@ RUN mkdir -p /var/www/html
 COPY . /var/www/html
 
 # Install any PHP extensions or dependencies your project requires
-RUN docker-php-ext-install mysqli
+RUN docker-php-ext-install mysqli pdo pdo_mysql
 
 # Expose the necessary port (usually 80 for HTTP)
 EXPOSE 80

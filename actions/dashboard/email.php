@@ -3,11 +3,10 @@
     if (isset($_POST['send_email'])) 
     {
         $recipients = $_POST['recipients'];
-        $recipient = $_POST['recipient'];
         $subject = $_POST['subject'];
         $message_body = $_POST['message'];
 
-        $headers = 'From: test@sourcecodespoint.com';
+        $headers = 'From: ravi.rauniyar@truenary.com';
 
         $attachment = '';
 
@@ -46,7 +45,7 @@
             $message = $message_body;
         }
         // Send the email
-        if (mail($recipient, $subject, $message, $headers)) 
+        if (mail($recipients, $subject, $message, $headers)) 
         {
             $mail_result = "Email sent successfully.";
             // Close the SMTP connection

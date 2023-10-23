@@ -8,6 +8,9 @@ services:
     image: mysql:latest
     environment:
       MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: rent_a_nest
     volumes:
       - ./database/rent_a_nest.sql:/docker-entrypoint-initdb.d/rent_a_nest.sql
+    ports:
+      - "3306:3306" 
     command: ["--init-file", "/docker-entrypoint-initdb.d/rent_a_nest.sql"]
